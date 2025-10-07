@@ -108,11 +108,12 @@ def showList():
     print("")
 
 def  showAproved():
-    aprove=[]
+    number=1
     for item in subjects:
         if item.note>=48 and item.status=='A':
-            aprove.append(item)
-    print(str(aprove))
+            print('Aproved Subject number #'+str(number))
+            item.showSubject()
+            number+=1
 def main():
     answer='yes'
     while answer =='yes':
@@ -137,3 +138,5 @@ def main():
         answer=input('Wanna keep going? yes or no ')
 if __name__=='__main__':
     main()
+
+
